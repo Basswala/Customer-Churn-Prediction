@@ -26,7 +26,12 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 # Copy application code
 COPY src/ /app/src/
-COPY artifacts/ /app/artifacts/
+
+# Create artifacts directory (models will be loaded here in production)
+# In production: mount as volume or download from MLflow/model registry
+RUN mkdir -p /app/artifacts
+# Uncomment below when you have trained models to include in the image:
+# COPY artifacts/ /app/artifacts/
 
 # Create non-root user for security
 RUN useradd -m -u 1000 appuser && \
