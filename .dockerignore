@@ -1,0 +1,53 @@
+# Ignore unnecessary files in Docker build context
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Data
+data/raw/
+data/processed/
+*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.log
+*.tmp
+temp_*
